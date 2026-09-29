@@ -58,4 +58,5 @@ const addExpr = function (a, b) {
 
 let addArrow = (a, b) => a + b;
 
-// As a Good practice, we should declare the variables at the top of the scope
+// As a Good practice, we should declare the variables at the top of the scope.
+// Always declare all the variables before call them
