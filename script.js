@@ -60,3 +60,27 @@ let addArrow = (a, b) => a + b;
 
 // As a Good practice, we should declare the variables at the top of the scope.
 // Always declare all the variables before call them
+
+/**
+ * HOW THE THIS KEYWORD WORKS
+ * special variable that is created for every execution context, Takes the value of the "owner" of the function in which the this keyword is used
+ */
+
+//TODO: THE VALUE OF this is NOT static. It depends on how the function is called, and its value is ony assigned when the function is actually called
+
+// WAYS TO CALL FUNCTIONS
+//1. Calling a function as a method
+const jonas = {
+  name: "Jonas",
+  year: 1989,
+  //the calcAge is the method
+  //in this case this refers to the object jonas, and inside of it we are looking for the variable that the year is presented
+  //this is used way better than calling it using the name object (jonas.year), this is because usually we create objects with a general name that can be more high level than an specific name and using this refers to the object indeed instead of the specific name
+  calcAge: function () {
+    return 2027 - this.year;
+  },
+};
+
+//2. normal functions = undefined on strict mode. if it's not on strict mode it will point to the global object in that case de browser window
+//3. arrow functions = do not get owned this keyboard
+//4. function called as a eventListener, then the this keyword will point to the element that the handler is attached to
