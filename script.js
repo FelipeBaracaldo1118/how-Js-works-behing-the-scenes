@@ -106,6 +106,8 @@ const calcAgeArrow = (birthYear) => {
 calcAgeArrow(1999);
 
 //when using it inside the object, if we do not specify were the this keyword is being used, this will give back the whole object
+//when we use it on objects it only points to the object that it's calling it. If we use it in differente objects it will not be override or mixed when another object calls it
+
 const jonas = {
   name: "jonas",
   year: 1991,
